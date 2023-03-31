@@ -10,7 +10,10 @@ fun main() {
         .start(wait = true)
 }
 
+//this module calls the following extension functions
 fun Application.module() {
-    configureSerialization()
+    //defines the routes
     configureRouting()
+    //installs ContentNegociation and enables the JSON serializer
+    configureSerialization()
 }
